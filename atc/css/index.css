@@ -1,0 +1,23 @@
+/** layout */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  display: flex;
+}
+
+.column-left {
+  padding-left: 10px;
+  width: 200px;
+  align-self: flex-end;
+}
+
+.column-content {
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
