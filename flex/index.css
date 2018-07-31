@@ -1,0 +1,89 @@
+/* html, body {
+  margin: 0;
+  padding: 0;
+} */
+
+div {
+  display: block;
+}
+
+.container {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.palette {
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-flow: row nowrap; */
+  height: 100%;
+  /* justify-content: space-arround; */
+  /* align-items: flex-start; */
+}
+
+.palette div{
+   /* min-width: 35px; */
+   /* min-height: 35px; */
+   width: 35px;
+
+
+}
+
+[class^=color] {
+  position: relative;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+.color-green {
+  background-color: green;
+  align-self: center;
+  height: 148px;
+  width: 48px;
+}
+
+.color-yellow  {
+  background-color: yellow;
+  /* flex-basis: 50%; */
+  color: black;
+  height: 100px;
+  margin-bottom: auto;
+  border: 1px solid black;
+}
+
+.color-magenta  {
+  background-color: magenta;
+  margin-top: auto;
+  height: 100px;
+  /* align-self: center; */
+  vertical-align: middle;
+
+}
+
+.color-blue  {
+  background-color: blue;
+  align-self: center;
+  height: 100px;
+}
+
+/** */
+.parent {
+  display: flex;
+  height: 100%;
+}
+
+.child {
+  width: 40px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.child--featured {
+  align-self: flex-start;
+}
