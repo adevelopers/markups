@@ -1,0 +1,187 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title The Great Keksby
+    base(href='./')
+    //- link(rel='stylesheet', href='outlines.css')
+    link(rel='stylesheet', href='css/index.css')
+  body
+    .page-header
+      .container
+        .header-top.clearfix
+          .header-logo
+            img(src='img/logo.png', alt='The Great Keksby', width='205', height='55')
+          ul.main-nav
+            li
+              a(href='#') Магазин
+            li
+              a(href='#') Каталог
+            li
+              a(href='#') Отзывы
+          a.btn.btn-quick-order(href='#') Заказать
+        .promo
+          a(href='#')
+            | Аксессуары для котов
+            br
+            |  Коллекция FW15
+    .features
+      .container
+        ul.clearfix
+          li.feature-item.feature-choice
+            h2.feature-title Выбор
+            p Ваш питомец оценит широту нашего ассортимента аксессуаров.
+          li.feature-item.feature-quality
+            h2.feature-title Качество
+            p Наши товары не сломаются на второй день. Только на третий.
+          li.feature-item.feature-safety
+            h2.feature-title Безопасность
+            p Все изготовлено из натуральных материалов, безопасных для котов.
+    .cat-reference
+      h2.section-title Немного теории
+      a.btn(href='#', title='Открыть справочник') Справочник
+      dl
+        dt
+          h3.reference-title Окрас кошек и котов
+          i.reference-source
+            | источник: 
+            a(target='_blank', href='https://ru.wikipedia.org') wikipedia
+        dd
+          img(src='img/article-1.jpg', alt='Окрас кошек и котов', width='100', height='100')
+          p
+            | Окрас шерсти, кожи и глаз кошки обусловлен присутствием в них пигмента меланина. Меланин находится в теле волоса в виде микроскопических гранул, которые различаются по форме, размеру и количеству, что и вызывает различия в окрасе.
+        dt
+          h3.reference-title Кошкин дом
+          i.reference-source
+            | источник: 
+            a(target='_blank', href='http://kotmur.spb.ru') kotmur.spb.ru
+        dd
+          img(src='img/article-2.jpg', alt='Кошкин дом', width='100', height='100')
+          p
+            | Нужен ли кошке Кошкин дом? Свой отдельный, обособленный от пространства городской квартиры Кошкин дом? Да, нужен! Нужен особый Кошкин дом, обустроенный по ее вкусу с лесенкой, с когтеточкой, с замкнутым, своим, отдельным уголком в ее, кошкином, доме.
+    .reviews
+      h2.section-title Довольные коты
+      a.btn(href='#', title='Посмотреть все отзывы') Все отзывы
+      .reviews-list
+        blockquote.review-item
+          p
+            | Спасибо Кексу за давно напрашивающуюся идею! Набрал себе очков на все случаи жизни: для чтения и для вечеринки с котанами B-)
+          cite.review-author Барсик, г. Москва
+        blockquote.review-item
+          p
+            | Я просто не могу без шоппинга и теперь не нужно тащить хозяйку в магазин, заказываю все аксессуары на сайте у Кекса он-лайн!
+          cite.review-author Мурка, г. Санкт-Петербург
+    .popular-and-price
+      h2.section-title Популярные товары
+      a.btn(href='#', title='Посмотреть все товары') Каталог
+      .popular-items
+        .catalog-item
+          img(src='img/glasses-1.jpg', alt='очки «Классика жанра»', width='306', height='206')
+          h3 Очки «Классика жанра»
+          b 300 р.
+          a.btn(href='#') Описание
+          a.btn(href='#') Купить
+        .catalog-item
+          img(src='img/glasses-2.jpg', alt='очки «Жалюзи»', width='306', height='206')
+          h3 Очки «Жалюзи»
+          b 400 р.
+          a.btn(href='#') Описание
+          a.btn(href='#') Купить
+        .catalog-item
+          img(src='img/glasses-3.jpg', alt='очки «Базилис»', width='306', height='206')
+          h3 Очки «Базилис»
+          b 500 р.
+          a.btn(href='#') Описание
+          a.btn(href='#') Купить
+      h2.section-title Прайс-лист на услуги
+      table.price-list
+        tr
+          th.price-number №
+          th Название услуги
+          th Кто оказывает
+          th Сколько стоит
+        tr
+          td.price-number 1.
+          td.price-name Стрижка
+          td Грумер
+          td 500 руб.
+        tr
+          td.price-number 2.
+          td.price-name Заточка когтей
+          td Грумер
+          td 300 руб.
+        tr
+          td.price-number 3.
+          td.price-name Накрутка усов
+          td Грумер
+          td 100 руб.
+        tr
+          td.price-number 4.
+          td.price-name Подбор аксессуаров
+          td Стилист
+          td 1550 руб.
+    .feedback
+      h2.section-title Остались вопросы?
+      p.feedback-tip Свяжитесь с нами и мы развеем оставшиеся у вас сомнения!
+      form.feedback-form(action='/keksby-mail', method='post')
+        .feedback-form-group
+          label(for='fullname') Представьтесь, пожалуйста:
+          input#fullname(type='text', name='fullname')
+        .feedback-form-group
+          label(for='phone') Контактный телефон:
+          input#phone(type='text', name='phone')
+        .feedback-form-group
+          label(for='email') Электронная почта:
+          input#email(type='text', name='email')
+        .checkbox-area
+          label
+            input(type='checkbox', name='subscription')
+            |             Я согласен получать спам и смс на телефон
+        .feedback-form-group
+          label(for='topic') Тема обращения:
+          select#topic(name='topic')
+            option(value='1') Условия доставки
+            option(value='2') Возврат товара
+            option(value='3') Жалоба в Роспотребнадзор
+        .feedback-form-group
+          label(for='message') Текст обращения:
+          textarea#message(name='message')
+        input.btn(type='submit', value='Отправить')
+    .page-footer
+      .footer-top
+        .footer-logo
+          img(src='img/logo.png', alt='The Great Keksby', width='205', height='55')
+        a.btn(href='#') Заказать
+      .footer-middle
+        .footer-menu
+          h3 Магазин
+          ul
+            li
+              a(href='#') Домики
+            li
+              a(href='#') Одежда
+            li
+              a(href='#') Очки
+        .footer-menu
+          h3 Отзывы
+          ul
+            li
+              a(href='#') Показать
+            li
+              a(href='#') Оставить
+        .footer-menu
+          h3 Прайс-лист
+          ul
+            li
+              a(href='#') Скачать прайс
+      .footer-bottom
+        .footer-social
+          b Давайте дружить!
+          a.social-btn(href='https://vk.com/htmlacademy') Вконтакте
+          a.social-btn(href='https://facebook.com/htmlacademy') Фейсбук
+          a.social-btn(href='https://instagram.com/htmlacademy') Инстаграм
+        .footer-copyright
+          | С 
+          span.heart любовью
+          |  для 
+          a(href='https://htmlacademy.ru') HTML Academy

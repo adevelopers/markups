@@ -1,0 +1,95 @@
+/** Colors */
+/** layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #060424;
+}
+
+.atc-container {
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  background-color: #060424;
+}
+.header .logo {
+  width: 150px;
+}
+.header .version {
+  width: 100px;
+}
+.header .menu {
+  display: flex;
+  flex-direction: row;
+}
+.header .menu .menu__item a {
+  color: white;
+  text-decoration: none;
+}
+.header .menu .menu__item a:active {
+  color: #3C6EE6;
+}
+
+.main-side {
+  display: flex;
+  flex-direction: row;
+}
+.main-side .widgets-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 400px;
+  width: 300px;
+  background-color: #09052F;
+}
+.main-side .content {
+  padding: 10px;
+  background: black;
+  color: white;
+  min-height: 600px;
+  background-color: #09052F;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+.widget .widget__title {
+  padding: 10px;
+  vertical-align: middle;
+  color: white;
+  background-color: #000352;
+  border-bottom: 1px solid #0C2772;
+}
+.widget .widget__content {
+  color: white;
+  padding: 10px;
+  min-height: 100px;
+  background-color: #060424;
+  background: linear-gradient(to bottom, #00045C, #000352);
+}
+
+.chart-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart {
+  width: 100%;
+  border-left: 1px dotted #555;
+  border-bottom: 1px dotted #555;
+  padding: 20px 20px 20px 0;
+}
+
+/*# sourceMappingURL=index.css.map */
