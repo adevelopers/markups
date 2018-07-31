@@ -1,44 +1,94 @@
+/** Colors */
+
 /** layout */
 body
   margin: 0
   padding: 0
+  // background-image: url("../../../atc1.jpg")
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-color: #060424
 
-.container
+.atc-container
   display: flex
   height: 100%
   display: flex
-
-.column-left
-  padding-left: 10px
-  width: 300px
-  align-self: flex-start
-
-.column-content
-  padding-left: 10px
+  flex-direction: column
 
 
-/** content */
-.left-menu
-  list-style: none
-  padding-left: 10px
-
-/** layout tables */
-.journal-page
+.header
   display: flex
-  align-content: stretch
-  flex-wrap: wrap
-
-.journal-table
-  td
-    background-color: gray
-
-
-/** table styles */
-.table
-  padding: 20px
-  border: 2px solid gray
-  margin-bottom: 20px
-  margin-right: 20px
-
-.table td
+  flex-direction: row
+  width: 100%
   padding: 10px
+  background-color: #060424
+  .logo
+    width: 150px
+
+  .version
+    width: 100px
+
+  .menu
+    display: flex
+    flex-direction: row
+
+    .menu__item
+      a
+        color: white
+        text-decoration: none
+
+      a:active
+        color: #3C6EE6
+
+.main-side
+  display: flex
+  flex-direction: row
+
+  .widgets-panel
+    display: flex
+    flex-direction: column
+    padding: 10px
+    min-height: 400px
+    width: 300px
+    background-color: #09052F
+
+
+  .content
+    padding: 10px
+    background: black
+    color: white
+    min-height: 600px
+    background-color: #09052F
+
+
+.widget
+  margin-bottom: 20px
+
+  .widget__title
+    padding: 10px
+    vertical-align: middle
+    color: white
+    background-color: #000352
+    border-bottom: 1px solid #0C2772
+
+  .widget__content
+    color: white
+    padding: 10px
+    min-height: 100px
+    background-color: #060424
+    background: linear-gradient(to bottom, #00045C, #000352)
+
+.chart-container
+  padding: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.chart
+  width: 100%
+  border-left: 1px dotted #555
+  border-bottom: 1px dotted #555
+  padding: 20px 20px 20px 0
+
+// #btc_line
+  filter: url('#blur-filter')
