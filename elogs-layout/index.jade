@@ -1,0 +1,38 @@
+mixin tbl(rows, columns)
+  table.table.journal-table
+    - for (var r=0; r < rows; r++) {
+        tr.row
+          - for (var c=0; c < columns; c++) {
+          td= c
+          - }
+    - }  
+
+- var items = ['one', 'two', 'three'];
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title Flex example
+    base(href='./')
+    //- link(rel='stylesheet', href='outlines.css')
+    link(rel='stylesheet', href='css/index.css')
+  body
+    .container  
+      .column-left
+        p lorem ipsum
+        ul.left-menu 
+          each itemName in items
+            li.left-menu__item 
+              a(href="#") menu #{itemName}
+              
+      .column-content  
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore fugiat earum a, quis deserunt quidem! Rem aliquam, asperiores eaque architecto deleniti maxime modi! Molestiae adipisci hic quis unde, autem dicta!
+        .journal-page
+            +tbl(3, 10)
+            +tbl(12, 5)
+            +tbl(8, 7)
+            +tbl(5, 13)
+            +tbl(6, 10)
+            +tbl(6, 14)
+            
+  
