@@ -1,3 +1,5 @@
+$width-left-menu : 230px;
+
 /*layout */
 body {
   margin: 0;
@@ -25,11 +27,12 @@ body {
 
 .column-left {
   // padding-left: 10px;
-  min-width: 230px;
+  min-width: $width-left-menu;
   margin: 0;
   align-self: flex-start;
 }
 
 .column-content {
   padding-left: 10px;
+  width: 100%;
 }

@@ -40,6 +40,11 @@
   min-height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #CCCCCC;
+  span.fa {
+    float: right;
+    font-size: 10px;
+    line-height: 38px;
+  }
 }
 
 .left-menu__item::after {
@@ -62,5 +67,4 @@
     text-decoration: none;
     border-right-color: $color-ac2;
     border-right-width: 4px;
-
 }
