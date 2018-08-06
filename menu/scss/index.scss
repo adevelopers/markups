@@ -42,7 +42,7 @@ $color-acent: red;
   color: $color-menu-text;
 }
 
-.menu > .menu__item.active {
+.menu > .menu__item.open {
   padding-bottom: 0;
 }
 
@@ -74,7 +74,7 @@ $color-acent: red;
   display: none;
 }
 
-.menu li.open .sub-menu, .menu li.current .sub-menu {
+.menu li.open .sub-menu{
   display: block;
 }
 

@@ -5,7 +5,7 @@ mixin submenu(parent)
       ul.sub-menu
         each subItem in parent.childs
           li.menu__item
-            a(href="#")= subItem.name
+            a(href="http://ya.ru")= subItem.name
           if subItem.childs
             +submenu(subItem)  
   -}
@@ -39,4 +39,5 @@ html(lang="ru")
                 span.menu-item__title=item.name
                 b.arrow.fa.fa-angle-down
               +submenu(item)
+      //- .after-left-menu(id="left-menu)
               
