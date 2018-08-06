@@ -1,0 +1,42 @@
+- var menu = {items:[ {name: "Россия", active: false, childs:[ {name: "Московская область", childs:[ {name: "Москва"}, {name: "Серпухов"}, {name: "Протвино"}, {name: "Кремёнки"},{name: "Чехов"} ]} ]}, {name: "США", childs:[ {name: "Калифорния", childs:[ {name: "Майами"}, {name: "Los Angeles"} ]} ]}, {name: "Испания", childs:[ {name: "Не каталония", childs:[ {name: "Мадрид"} ]} ]}, ] }; 
+mixin submenu(parent)
+  - if (typeof(parent.childs) !== 'undefined'){
+    if (parent.childs.length > 0)
+      ul.sub-menu
+        each subItem in parent.childs
+          li.menu__item
+            a(href="#")= subItem.name
+          if subItem.childs
+            +submenu(subItem)  
+  -}
+  
+doctype html
+html(lang="ru")
+  head
+    title Строим вертикальное меню 
+    meta(charset="utf-8")
+    meta(name='description', content='')
+    link(rel='stylesheet', href='index.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css')
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(src="js/menu.js")
+  body
+    .menu-container
+      ul.menu
+        each item in menu.items 
+          if item.active
+            li.menu__item.open 
+              a(href="#") 
+                i.menu-item__icon.fa.fa-book
+                span.menu-item__title=item.name
+                b.arrow.fa.fa-angle-down
+              +submenu(item)
+            
+          else
+            li.menu__item  
+              a(href="#")
+                i.menu-item__icon.fa.fa-book
+                span.menu-item__title=item.name
+                b.arrow.fa.fa-angle-down
+              +submenu(item)
+              
