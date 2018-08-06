@@ -1,28 +1,23 @@
 
-
-$( document ).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
   console.log("Menu loaded");
-  $(".menu > li.menu__item").on("click", function(e){
-    e.stopPropagation();
-    $(".menu__item").removeClass("active");
-    $(e.currentTarget).toggleClass("active");
-  })
+
+
+  let items = document.querySelectorAll(".menu > li.menu__item");
+  [].forEach.call(items, (item) => {
+    console.log(item);
+    item.addEventListener('click', function(event) {
+      let listItem = event.target.closest("li.menu__item");
+      listItem.classList.toggle("open");
+      // event.preventDefault();
+      event.stopPropagation();
+    });
+  });
+
 });
 
 
-function ready(fn) {
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-};
 
-// ready(function(){
-//   console.log("Menu loaded");
-//   $(".menu > li.menu__item").on("click", function(e){
-//     e.stopPropagation();
-//     $(".menu__item").removeClass("active");
-//     $(e.currentTarget).toggleClass("active");
-//   })
+// document.querySelector getElementById('anchor').addEventListener('click', function() {
+//   console.log('anchor');
 // });
