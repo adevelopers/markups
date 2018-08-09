@@ -6,91 +6,119 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-color: #060424;
-  font-family: "PT Sans Narrow";
-}
+  font-family: "PT Sans Narrow"; }
 
 .atc-container {
   display: flex;
   height: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .header {
   display: flex;
   flex-direction: row;
   width: 100%;
   padding: 10px;
-  background-color: #060424;
-}
-.header .logo {
-  width: 150px;
-}
-.header .version {
-  width: 100px;
-}
-.header .menu {
-  display: flex;
-  flex-direction: row;
-}
-.header .menu .menu__item a {
-  color: white;
-  text-decoration: none;
-}
-.header .menu .menu__item a:active {
-  color: #3C6EE6;
-}
+  height: 60px;
+  line-height: 60px;
+  background-color: #060424; }
+  .header .logo {
+    width: 150px; }
+  .header .version {
+    width: 100px; }
+  .header .menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px; }
+    .header .menu .menu__item a {
+      color: white;
+      text-decoration: none; }
+    .header .menu .menu__item a:active {
+      color: #3C6EE6; }
 
 .main-side {
   display: flex;
   flex-direction: row;
-}
-.main-side .widgets-panel {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  min-height: 400px;
-  width: 300px;
-  background-color: #09052F;
-}
-.main-side .content {
-  padding: 10px;
-  background: black;
-  color: white;
-  min-height: 600px;
-  background-color: #09052F;
-}
+  background-color: #010554; }
+  .main-side .left-menu {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    border-top: 1px solid #052978; }
+    .main-side .left-menu .menu__item {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #010554;
+      border-bottom: 1px solid #052978; }
+      .main-side .left-menu .menu__item a {
+        color: white;
+        text-decoration: none; }
+    .main-side .left-menu .menu__item:hover {
+      background-color: #01032B; }
+    .main-side .left-menu .menu__item.active {
+      background-color: #01032B; }
+      .main-side .left-menu .menu__item.active a {
+        color: #1D68CC;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; }
+  .main-side .widgets-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    min-height: 400px;
+    width: 300px;
+    background-color: #09052F;
+    padding-top: 40px; }
+  .main-side .content {
+    background: black;
+    color: white;
+    min-height: 600px;
+    background-color: #09052F; }
+    .main-side .content .widget:first-child {
+      padding-top: 30px; }
 
 .widget {
-  margin-bottom: 20px;
-}
-.widget .widget__title {
-  padding: 10px;
-  vertical-align: middle;
-  color: white;
-  background-color: #000352;
-  border-bottom: 1px solid #0C2772;
-}
-.widget .widget__content {
-  color: white;
-  padding: 10px;
-  min-height: 100px;
-  background-color: #060424;
-  background: linear-gradient(to bottom, #00045C, #000352);
-}
+  margin-bottom: 40px; }
+  .widget .widget__title {
+    padding: 10px;
+    vertical-align: middle;
+    color: white;
+    background-color: #000352;
+    border-bottom: 1px solid #0C2772;
+    text-transform: capitalize; }
+  .widget .widget__icon {
+    margin-top: -7px;
+    display: block;
+    color: #4F9CE5;
+    float: right;
+    width: 25px;
+    border-radius: 17px;
+    border: 3px solid #4F9CE5;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 28px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black; }
+  .widget .widget__content {
+    color: white;
+    padding: 10px;
+    min-height: 100px;
+    background-color: #060424;
+    background: linear-gradient(to bottom, #00045C, #000352); }
 
 .chart-container {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .chart {
   width: 100%;
   border-left: 1px dotted #555;
   border-bottom: 1px dotted #555;
-  padding: 20px 20px 20px 0;
-}
+  padding: 20px 20px 20px 0; }
 
 /*# sourceMappingURL=index.css.map */

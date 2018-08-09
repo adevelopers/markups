@@ -1,9 +1,10 @@
 mixin widget(title, content)
   .widget
     .widget__title= title
+      i.widget__icon.fas.fa-bolt
     .widget__content= content
 
-- var menuItems = ['Главная', 'Покупка', 'Продажа','Настройки'];
+- var menuItems = ['Покупка', 'Продажа','Настройки'];
 - var widgets = [{t:"ваша мощность"}, {t:"баланс кошелька "}, {t:"баланс аккаунта"},  {t:"статистика"}]
 doctype html
 html(lang='ru')
@@ -12,7 +13,8 @@ html(lang='ru')
     title Flex example
     base(href='./')
     //- link(rel='stylesheet', href='outlines.css')
-    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow")
+    link(rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow")
     link(rel='stylesheet', href='css/index.css')
     
   body
@@ -24,7 +26,15 @@ html(lang='ru')
           each itemName in menuItems
             li.menu__item 
               a(href="#") #{itemName}
-      .main-side        
+      .main-side      
+        ul.left-menu
+          li.menu__item.active 
+            a(href="") Главная
+          each menuItem in menuItems
+            li.menu__item 
+              a(href="")=menuItem
+            
+            
         .widgets-panel
           each widget in widgets
             +widget(widget.t,"one")
@@ -34,7 +44,7 @@ html(lang='ru')
             .widget__title График курса БТС
             .widget__content
               .chart-container
-                svg(viewBox="0 0 100% 100%" class="chart")
+                svg(viewBox="0 0 1000 200" class="chart")
                   filter(id="blur-filter" x="-2" y="-2" width="100%" height="100%")
                     femergenode(in="coloredBlur")
                     feGaussianBlur(in="SourceGraphic" stdDeviation="2") 
@@ -44,13 +54,13 @@ html(lang='ru')
                      stop(offset="30%"  stop-color="#BF3AF2")
                      stop(offset="100%" stop-color="#479DE8")
                  
-                  polyline(id="btc_line" fill="none" stroke="url(#linear)" stroke-width="4" points="00,120 20,60 40,80 60,20 80,80 100,80 120,60 140,100 160,90 180,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340, 100")
+                  polyline(id="btc_line" fill="none" stroke="url(#linear)" stroke-width="4" points="0,120 20,60 40,80 60,20 80,80 100,80 120,60 140,100 160,90 180,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340, 0")
           
           .widget
               .widget__title График доходности проэкта
               .widget__content
                 .chart-container
-                  svg(viewBox="0 0 100% 100%" class="chart")
+                  svg(viewBox="0 0 1000 100" class="chart")
                     filter(id="blur-filter" x="-2" y="-2" width="100%" height="100%")
                     femergenode(in="coloredBlur")
                       feGaussianBlur(in="SourceGraphic" stdDeviation="2") 
@@ -60,7 +70,7 @@ html(lang='ru')
                          stop(offset="30%"  stop-color="#BF3AF2")
                          stop(offset="100%" stop-color="#479DE8")
                        
-                    polyline(id="btc_line" fill="none" stroke="url(#linear)" stroke-width="4" points="00,120 20,60 40,80 60,20 80,80 100,80 120,60 140,100 160,90 180,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340" )
+                    polyline(id="btc_line" fill="none" stroke="url(#linear)" stroke-width="4" points="0 0,120 20,60 40,80 60,20 80,80 100,80 120,60 140,100 160,90 180,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340" )
           +widget("График доходности проэкта","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed iusto magnam culpa tenetur ut, natus corrupti dignissimos iste quam fugit. Eos voluptas cupiditate, veniam praesentium. Quasi temporibus quas natus impedit.")
 
             

@@ -1,10 +1,14 @@
 /** Colors */
+$color-bg-main: #060424
+$color-bg-menu: #010554
+$color-border: #052978
+$clr-text-active: #1D68CC
+$clr-text-icon: #4F9CE5
 
 /** layout */
 body
   margin: 0
   padding: 0
-  // background-image: url("../../../atc1.jpg")
   background-position: 50% 50%
   background-repeat: no-repeat
   background-color: #060424
@@ -22,7 +26,11 @@ body
   flex-direction: row
   width: 100%
   padding: 10px
+  height: 60px
+  line-height: 60px
   background-color: #060424
+
+
   .logo
     width: 150px
 
@@ -32,6 +40,7 @@ body
   .menu
     display: flex
     flex-direction: row
+    margin-left: 60px
 
     .menu__item
       a
@@ -44,26 +53,55 @@ body
 .main-side
   display: flex
   flex-direction: row
+  background-color: $color-bg-menu
+
+  .left-menu
+    display: flex
+    flex-direction: column
+    width: 300px
+    margin: 0
+    margin-top: 40px
+    padding: 0
+    border-top: 1px solid $color-border
+
+    .menu__item
+      cursor: pointer
+      padding: 10px
+      background-color: $color-bg-menu
+      border-bottom: 1px solid $color-border
+
+      a
+        color: white
+        text-decoration: none
+    .menu__item:hover
+      background-color: #01032B
+    .menu__item.active
+      background-color: #01032B
+      a
+        color: $clr-text-active
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue
+        // text-shadow: 2px 2px 5px $clr-text-active
 
   .widgets-panel
     display: flex
     flex-direction: column
-    padding: 10px
+    padding: 40px
     min-height: 400px
     width: 300px
     background-color: #09052F
-
+    padding-top: 40px
 
   .content
-    padding: 10px
     background: black
     color: white
     min-height: 600px
     background-color: #09052F
 
+    .widget:first-child
+      padding-top: 30px
 
 .widget
-  margin-bottom: 20px
+  margin-bottom: 40px
 
   .widget__title
     padding: 10px
@@ -71,6 +109,22 @@ body
     color: white
     background-color: #000352
     border-bottom: 1px solid #0C2772
+    text-transform: capitalize
+
+  .widget__icon
+    margin-top: -7px
+    display: block
+    color: #4F9CE5
+    float: right
+    width: 25px
+    border-radius: 17px
+    border: 3px solid #4F9CE5
+    height: 25px
+    text-align: center
+    vertical-align: middle
+    line-height: 28px
+    text-shadow: 2px 2px black
+    box-shadow: 2px 2px black
 
   .widget__content
     color: white
@@ -81,6 +135,7 @@ body
 
 .chart-container
   padding: 20px
+
   display: flex
   align-items: center
   justify-content: center
