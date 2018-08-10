@@ -39,7 +39,7 @@ html(lang='ru')
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quos id non harum ullam reiciendis dicta quam rem magnam assumenda quasi dolore recusandae perferendis autem possimus praesentium sequi, repellendus veniam.   
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ex voluptatum dolorum ut placeat accusantium pariatur tenetur iure incidunt natus error, blanditiis amet molestias! Tempore aperiam dolore, cupiditate voluptatibus debitis?
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dicta, beatae inventore ut odit quibusdam! Odit odio, delectus aspernatur officiis. Cupiditate, perferendis vitae debitis quos sapiente reiciendis iure, quae vero.
-            
+          include jade_include/tables.jade
         .widgets-panel
           each widget in widgets
             +widget(widget.t,"one")
@@ -77,7 +77,7 @@ html(lang='ru')
                        
                     polyline(id="btc_line" fill="none" stroke="url(#linear)" stroke-width="4" points="0 0,120 20,60 40,80 60,20 80,80 100,80 120,60 140,100 160,90 180,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340" )
           +widget("График доходности проэкта","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed iusto magnam culpa tenetur ut, natus corrupti dignissimos iste quam fugit. Eos voluptas cupiditate, veniam praesentium. Quasi temporibus quas natus impedit.")
-
+    
     script(src="js/index.js")   
         
             

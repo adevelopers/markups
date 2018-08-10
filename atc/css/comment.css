@@ -1,0 +1,24 @@
+.comment {
+  color: #ffFFff;
+  padding: 10px;
+  border: 1px dotted white; }
+  .comment .btn {
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .comment .btn:hover {
+    transform: rotate(180deg); }
+  .comment .comment__text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+/*# sourceMappingURL=comment.css.map */
